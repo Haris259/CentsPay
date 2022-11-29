@@ -5,15 +5,18 @@ import {globalStyles} from '../../../../common/styles';
 import {Fonts} from '../../../../assets/font/fonts';
 import {ArrowBack, Edit} from '../../../../assets/SVG/svg';
 import {SvgXml} from 'react-native-svg';
+import { SafeAreaView } from 'react-native-safe-area-context';
 const PersonalInfo = ({navigation}) => {
   return (
-    <View style={{flex: 1, backgroundColor: '#FAFAFA'}}>
+    <SafeAreaView style={{flex: 1, backgroundColor: '#FAFAFA'}}>
       <View style={{margin: 30}}>
         <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
           <TouchableOpacity onPress={() => navigation.goBack()}>
             <SvgXml xml={ArrowBack} />
           </TouchableOpacity>
+          <TouchableOpacity>
           <SvgXml xml={Edit} />
+          </TouchableOpacity>
         </View>
         <Text
           style={{
@@ -93,7 +96,7 @@ const PersonalInfo = ({navigation}) => {
           </Text>
         </View>
       </View>
-    </View>
+    </SafeAreaView>
   );
 };
 

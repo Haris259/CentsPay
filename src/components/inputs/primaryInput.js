@@ -17,6 +17,7 @@ const PrimaryInput = ({
   keyboardType,
   activeOutlineColor,
   maxLength,
+  onSubmitEditing
 }) => {
   const [error, setError] = useState(false);
   const [cont, setCont] = useState('');
@@ -49,6 +50,7 @@ const PrimaryInput = ({
           fontFamily: Fonts.medium,
           lineHeight: 22,
         }}
+        onSubmitEditing={onSubmitEditing}
         value={value}
         onChangeText={onChangeText}
         keyboardType={keyboardType}

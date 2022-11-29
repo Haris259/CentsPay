@@ -75,6 +75,7 @@ const VerifyPhoto = ({navigation, withAlphaFilter, route}) => {
                 alignItems: 'center',
                 justifyContent: 'space-between',
                 paddingHorizontal: 20,
+                // backgroundColor:'red'
               }}
               onPress={closeModal}>
               <Text

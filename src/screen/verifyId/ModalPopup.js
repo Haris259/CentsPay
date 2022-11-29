@@ -49,6 +49,7 @@ const ModalPopUp = ({modalVisible, closeModal}) => {
                 justifyContent: 'flex-end',
                 alignItems: 'center',
                 marginBottom: 30,
+                
               }}>
               <SecondaryButton title="Close" onPress={closeModal} />
             </View>

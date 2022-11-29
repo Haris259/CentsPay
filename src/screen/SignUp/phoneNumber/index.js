@@ -1,4 +1,4 @@
-import {StyleSheet, Text, Image, View, TouchableOpacity} from 'react-native';
+import {StyleSheet, Text, Image, View, TouchableOpacity,StatusBar} from 'react-native';
 import CountryPicker from 'react-native-country-picker-modal';
 import {TextInput} from 'react-native-paper';
 import React, {useEffect, useState} from 'react';
@@ -7,10 +7,11 @@ import MainHeading from '../../../components/heading/mainHeading';
 import VirtualKeyboard from 'react-native-virtual-keyboard';
 import SecondaryButton from '../../../components/button/secondaryButton';
 import icon from '../../../assets/icon';
-import {TextInputMask} from 'react-native-masked-text';
+import TextInputMask from 'react-native-text-input-mask';
 
 import ModalCode from './items/modalCode';
 import {Fonts} from '../../../assets/font/fonts';
+import { SafeAreaView } from 'react-native-safe-area-context';
 const PhoneNumber = ({navigation, route}) => {
   const [modalVisible, setModalVisible] = useState(false);
   const [chooseCountry, setChooseCountry] = useState(true);
@@ -31,11 +32,15 @@ const PhoneNumber = ({navigation, route}) => {
     setCountryPickerVisible(!countryPickerVisible);
   };
   const handleClick = () => {
-    setModalVisible(!modalVisible);
+    // alert(modalVisible)
+    setModalVisible(false);
+
+
   };
 
   return (
-    <>
+    <SafeAreaView>
+
       <View style={styles.container}>
         <View style={styles.heading}>
           <Text style={globalStyles.miniHeading}>Get started with</Text>
@@ -105,7 +110,7 @@ const PhoneNumber = ({navigation, route}) => {
         </View>
       </View>
       <ModalCode modalVisible={modalVisible} handleClick={handleClick} />
-    </>
+    </SafeAreaView>
   );
 };
 
@@ -127,6 +132,7 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderRadius: 10,
     borderColor: 'rgba(218, 218, 218, 1)',
+    // backgroundColor:'red'
   },
   countryPickerVisible: {
     flexDirection: 'row',

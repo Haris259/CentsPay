@@ -56,7 +56,7 @@ export const globalStyles = StyleSheet.create({
   btnText: {
     fontSize: 16,
     lineHeight: 24,
-    fontFamily: Fonts.medium,
+    fontFamily: Fonts.semiBold,
     color: colors.white,
   },
   btnTextSemiBold: {
@@ -116,6 +116,8 @@ export const globalStyles = StyleSheet.create({
     fontFamily: Fonts.regular,
     color: colors.black,
     letterSpacing: -0.4,
+    numOfLines: 1
+    
   },
   grayHeading2: {
     fontSize: 18,

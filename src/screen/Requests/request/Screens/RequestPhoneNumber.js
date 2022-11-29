@@ -4,9 +4,10 @@ import {globalStyles} from '../../../../common/styles';
 import ModalCode from '../items/modalCode';
 import {Fonts} from '../../../../assets/font/fonts';
 import icon from '../../../../assets/icon';
-import {TextInputMask} from 'react-native-masked-text';
+import TextInputMask from 'react-native-text-input-mask';
 import VirtualKeyboard from 'react-native-virtual-keyboard';
 import SecondaryButton from '../../../../components/button/secondaryButton';
+import { SafeAreaView } from 'react-native-safe-area-context';
 const RequestPhoneNumber = ({navigation, route}) => {
   const [modalVisible, setModalVisible] = useState(false);
   const [chooseCountry, setChooseCountry] = useState(true);
@@ -26,7 +27,7 @@ const RequestPhoneNumber = ({navigation, route}) => {
   const item = route.params;
 
   return (
-    <>
+    <SafeAreaView>
       <View style={styles.container}>
         <View style={styles.heading}>
           <Text style={globalStyles.miniHeading}>Request money{'\n'}from</Text>
@@ -92,7 +93,7 @@ const RequestPhoneNumber = ({navigation, route}) => {
         </View>
       </View>
       <ModalCode modalVisible={modalVisible} handleClick={handleClick} />
-    </>
+    </SafeAreaView>
   );
 };
 

@@ -1,4 +1,4 @@
-import {View, Text, TouchableOpacity, TextInput} from 'react-native';
+import {View, Text, TouchableOpacity, TextInput,Keyboard,TouchableWithoutFeedback} from 'react-native';
 import React from 'react';
 import MainHeading from '../../../components/heading/mainHeading';
 import PrimaryInput from '../../../components/inputs/primaryInput';
@@ -8,11 +8,26 @@ import {useNavigation} from '@react-navigation/native';
 import {useState} from 'react';
 import {Fonts} from '../../../assets/font/fonts';
 import {colors} from '../../../common/colors';
+import { SafeAreaView } from 'react-native-safe-area-context';
+
+
+const HideKeyboard = ({ children }) => (
+  <TouchableWithoutFeedback onPress={() => Keyboard.dismiss()}>
+    {children}
+  </TouchableWithoutFeedback>
+);
+
+
 const CodeError = () => {
   const navigation = useNavigation();
   const [error, setError] = useState('');
+
+
+
   return (
-    <View style={{flex: 1, backgroundColor: '#FAFAFF'}}>
+    <HideKeyboard>
+    <SafeAreaView style={{flex: 1, backgroundColor: '#FAFAFF'}}>
+
       <View style={{marginLeft: 30, marginTop: 80}}>
         <Text
           style={{
@@ -36,7 +51,11 @@ const CodeError = () => {
         </Text>
       </View>
       <View style={{marginHorizontal: 30, marginTop: 20}}>
+
+  
+
         <View style={{height: 55}}>
+       
           <TextInput
             keyboardType="number-pad"
             style={{
@@ -51,7 +70,9 @@ const CodeError = () => {
             }}
             placeholder="Code"
           />
-        </View>
+         </View>
+     
+        
       </View>
       <View style={{marginHorizontal: 30}}>
         <Text
@@ -111,7 +132,9 @@ const CodeError = () => {
           />
         </View>
       </View>
-    </View>
+    </SafeAreaView>
+    </HideKeyboard> 
+
   );
 };
 

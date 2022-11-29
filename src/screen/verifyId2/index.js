@@ -7,6 +7,8 @@ import DocumentPicker from 'react-native-document-picker';
 import {Fonts} from '../../assets/font/fonts';
 import {globalStyles} from '../../common/styles';
 import {colors} from '../../common/colors';
+import {SafeAreaView} from 'react-native-safe-area-context';
+import Svg, {Path, Rect, G, Defs, ClipPath} from 'react-native-svg';
 const VerifyId2 = ({navigation}) => {
   const [snap, setSnap] = useState('');
   const selectOneFile = async () => {
@@ -58,14 +60,19 @@ const VerifyId2 = ({navigation}) => {
     }
   };
   return (
-    <View style={{flex: 1, backgroundColor: '#FAFAFA'}}>
-      <View style={{flex: 1, margin: 20}}>
-        <TouchableOpacity onPress={() => navigation.goBack()}>
+    <SafeAreaView style={{flex: 1, backgroundColor: '#FAFAFA'}}>
+      <View style={{flexDirection: 'row', marginHorizontal: 10}}>
+        <TouchableOpacity
+          style={{marginTop: 8}}
+          onPress={() => navigation.goBack()}>
           <Image source={icon.arrowBack} />
         </TouchableOpacity>
-        <Text style={[globalStyles.h3Black, {marginTop: 20}]}>
+        <Text style={[globalStyles.h3Black, {marginHorizontal: 10}]}>
           Verify your Identity
         </Text>
+      </View>
+
+      <View style={{flex: 1, margin: 10}}>
         <Text style={[globalStyles.blackText, {marginTop: 20}]}>
           To keep your money safe, we need to verify your identify. This a legal
           requirement that helps us to keep your account secure.
@@ -80,7 +87,32 @@ const VerifyId2 = ({navigation}) => {
         </Text>
         <View style={{marginTop: 20}}>
           <View style={{flexDirection: 'row', alignItems: 'center'}}>
-            <Image source={icon.accept} style={{height: 22, width: 22}} />
+            {/* <Image source={icon.accept} style={{height: 22, width: 22}} />
+             */}
+            <View style={{paddingTop: 15}}>
+              <Svg
+                width="23"
+                height="22"
+                viewBox="0 0 80 80"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <G clip-path="url(#clip0_1381_2874)">
+                  <Path
+                    d="M40.098 0C18.0417 0 0.0986328 17.9431 0.0986328 40.0001C0.0986328 62.0564 18.0417 80.0002 40.098 80.0002C62.1536 80.0002 80.0967 62.0564 80.0967 40.0001C80.0967 17.9431 62.1536 0 40.098 0ZM40.098 76.739C19.8406 76.739 3.35981 60.2569 3.35981 40.0001C3.35981 19.7426 19.8406 3.26118 40.098 3.26118C60.3548 3.26118 76.8355 19.7426 76.8355 40.0001C76.8355 60.2569 60.3548 76.739 40.098 76.739Z"
+                    fill="#D84E5B"
+                  />
+                  <Path
+                    d="M60.7567 24.0498L32.3153 52.4906L19.4399 39.6158C18.8031 38.9791 17.7713 38.9791 17.1338 39.6158C16.4971 40.2526 16.4971 41.2844 17.1338 41.9219L31.1623 55.9496C31.4806 56.268 31.898 56.4268 32.3153 56.4268C32.7326 56.4268 33.1499 56.268 33.4683 55.9496L63.0627 26.3559C63.6995 25.7191 63.6995 24.6866 63.0627 24.0498C62.4259 23.4131 61.3935 23.4131 60.7567 24.0498Z"
+                    fill="#D84E5B"
+                  />
+                </G>
+                <Defs>
+                  <ClipPath id="clip0_1381_2874">
+                    <Rect width="80" height="80" fill="white" />
+                  </ClipPath>
+                </Defs>
+              </Svg>
+            </View>
             <Text
               style={[
                 globalStyles.blackText,
@@ -91,7 +123,31 @@ const VerifyId2 = ({navigation}) => {
           </View>
           <View
             style={{flexDirection: 'row', alignItems: 'center', marginTop: 20}}>
-            <Image source={icon.accept} style={{height: 22, width: 22}} />
+           <View style={{}}>
+              <Svg
+                width="23"
+                height="22"
+                viewBox="0 0 80 80"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <G clip-path="url(#clip0_1381_2874)">
+                  <Path
+                    d="M40.098 0C18.0417 0 0.0986328 17.9431 0.0986328 40.0001C0.0986328 62.0564 18.0417 80.0002 40.098 80.0002C62.1536 80.0002 80.0967 62.0564 80.0967 40.0001C80.0967 17.9431 62.1536 0 40.098 0ZM40.098 76.739C19.8406 76.739 3.35981 60.2569 3.35981 40.0001C3.35981 19.7426 19.8406 3.26118 40.098 3.26118C60.3548 3.26118 76.8355 19.7426 76.8355 40.0001C76.8355 60.2569 60.3548 76.739 40.098 76.739Z"
+                    fill="#D84E5B"
+                  />
+                  <Path
+                    d="M60.7567 24.0498L32.3153 52.4906L19.4399 39.6158C18.8031 38.9791 17.7713 38.9791 17.1338 39.6158C16.4971 40.2526 16.4971 41.2844 17.1338 41.9219L31.1623 55.9496C31.4806 56.268 31.898 56.4268 32.3153 56.4268C32.7326 56.4268 33.1499 56.268 33.4683 55.9496L63.0627 26.3559C63.6995 25.7191 63.6995 24.6866 63.0627 24.0498C62.4259 23.4131 61.3935 23.4131 60.7567 24.0498Z"
+                    fill="#D84E5B"
+                  />
+                </G>
+                <Defs>
+                  <ClipPath id="clip0_1381_2874">
+                    <Rect width="80" height="80" fill="white" />
+                  </ClipPath>
+                </Defs>
+              </Svg>
+            </View>
+            {/* <Image source={icon.accept} style={{height: 22, width: 22}} /> */}
             <Text
               style={[globalStyles.blackText, {width: 270, marginLeft: 10}]}>
               Show the full ducument (all four corners should be visible).
@@ -99,7 +155,31 @@ const VerifyId2 = ({navigation}) => {
           </View>
           <View
             style={{flexDirection: 'row', alignItems: 'center', marginTop: 20}}>
-            <Image source={icon.accept} style={{height: 22, width: 22}} />
+          <View style={{}}>
+              <Svg
+                width="23"
+                height="22"
+                viewBox="0 0 80 80"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <G clip-path="url(#clip0_1381_2874)">
+                  <Path
+                    d="M40.098 0C18.0417 0 0.0986328 17.9431 0.0986328 40.0001C0.0986328 62.0564 18.0417 80.0002 40.098 80.0002C62.1536 80.0002 80.0967 62.0564 80.0967 40.0001C80.0967 17.9431 62.1536 0 40.098 0ZM40.098 76.739C19.8406 76.739 3.35981 60.2569 3.35981 40.0001C3.35981 19.7426 19.8406 3.26118 40.098 3.26118C60.3548 3.26118 76.8355 19.7426 76.8355 40.0001C76.8355 60.2569 60.3548 76.739 40.098 76.739Z"
+                    fill="#D84E5B"
+                  />
+                  <Path
+                    d="M60.7567 24.0498L32.3153 52.4906L19.4399 39.6158C18.8031 38.9791 17.7713 38.9791 17.1338 39.6158C16.4971 40.2526 16.4971 41.2844 17.1338 41.9219L31.1623 55.9496C31.4806 56.268 31.898 56.4268 32.3153 56.4268C32.7326 56.4268 33.1499 56.268 33.4683 55.9496L63.0627 26.3559C63.6995 25.7191 63.6995 24.6866 63.0627 24.0498C62.4259 23.4131 61.3935 23.4131 60.7567 24.0498Z"
+                    fill="#D84E5B"
+                  />
+                </G>
+                <Defs>
+                  <ClipPath id="clip0_1381_2874">
+                    <Rect width="80" height="80" fill="white" />
+                  </ClipPath>
+                </Defs>
+              </Svg>
+            </View>
+            {/* <Image source={icon.accept} style={{height: 22, width: 22}} /> */}
             <Text
               style={[globalStyles.blackText, {width: 270, marginLeft: 10}]}>
               Use a colour image that is clear and easy to read.
@@ -139,7 +219,7 @@ const VerifyId2 = ({navigation}) => {
           </TouchableOpacity>
         </View>
       </View>
-    </View>
+    </SafeAreaView>
   );
 };
 

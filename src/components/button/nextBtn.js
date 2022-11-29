@@ -12,7 +12,9 @@ const NextBtn = ({title, onPress}) => {
         width: 143,
         height: 55,
       }}
-      colors={['rgba(216, 78, 91, 1 )', 'rgba(216, 78, 91, 0.7)']}>
+      colors={['rgba(216, 78, 91, 1 )','rgba(216, 78, 91, 1 )', 'rgba(216, 78, 91, 0.7)']}
+      start={{x: 0, y: 0}} end={{x: 1, y: 0}}
+      >
       <TouchableOpacity onPress={onPress} style={styles.btnContainer}>
         <Text style={globalStyles.btnTextSemiBold}>{title}</Text>
       </TouchableOpacity>

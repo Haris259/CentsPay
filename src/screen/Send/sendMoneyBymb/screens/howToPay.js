@@ -5,14 +5,23 @@ import {useNavigation} from '@react-navigation/native';
 import {Fonts} from '../../../../assets/font/fonts';
 import {SvgXml} from 'react-native-svg';
 import {Bank2, Card2} from '../../../../assets/SVG/svg';
+import { SafeAreaView } from 'react-native-safe-area-context';
+import Ionicons from 'react-native-vector-icons/Ionicons';
 const HowToPay = () => {
   const navigation = useNavigation();
   return (
-    <View style={{flex: 1, backgroundColor: '#FAFAFF'}}>
+    <SafeAreaView style={{flex: 1, backgroundColor: '#FAFAFF'}}>
       <View style={{margin: 30}}>
-        <TouchableOpacity onPress={() => navigation.goBack()}>
-          <Image source={icon.arrowBackRed} />
-        </TouchableOpacity>
+      <TouchableOpacity
+        style={{ marginTop: 10}}
+        onPress={() => navigation.goBack()}>
+        <Ionicons
+          name="ios-chevron-back"
+          size={30}
+          // style={{backgroundColor: 'red'}}
+          color="rgba(219, 92, 79, 1)"
+        />
+      </TouchableOpacity>
         <Text
           style={{
             fontSize: 25,
@@ -55,6 +64,7 @@ const HowToPay = () => {
           </Text>
         </TouchableOpacity>
         <TouchableOpacity
+         onPress={() => navigation.navigate('accountInfo')}
           style={{
             height: 194,
             marginTop: 16,
@@ -94,7 +104,7 @@ const HowToPay = () => {
           </Text>
         </TouchableOpacity>
       </View>
-    </View>
+    </SafeAreaView>
   );
 };
 

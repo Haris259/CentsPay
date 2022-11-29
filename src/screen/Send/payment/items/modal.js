@@ -67,7 +67,8 @@ const ModalPopUp = ({modalVisible, closeModal}) => {
           <View style={styles.btnView}>
             <PrimaryButton
               title="Continue"
-              onPress={() => navigation.navigate('howToSendMoney')}
+              // closeModal={closeModal()}
+              onPress={() => {navigation.navigate('howToSendMoney'),closeModal()}}
             />
           </View>
         </View>
@@ -84,14 +85,16 @@ const styles = StyleSheet.create({
     backgroundColor: '#ffffff',
   },
   modalView: {
-    top: 290,
+    top: '25%',
     width: 345,
     height: 430,
-    margin: 20,
+    // margin: 20,
     backgroundColor: 'rgba(255, 255, 255, 1)',
     borderRadius: 20,
     shadowOpacity: 0.25,
     shadowRadius: 4,
+    justifyContent:'center',
+    alignSelf:'center'
   },
   icon: {
     alignItems: 'flex-end',

@@ -11,10 +11,24 @@ target 'CENTS' do
     # to enable hermes on iOS, change `false` to `true` and then install pods
     :hermes_enabled => false
   )
+   
+  permissions_path = '../node_modules/react-native-permissions/ios'
+  pod 'RNPermissions', :path => '../node_modules/react-native-permissions'
+  pod 'Permission-Microphone', :path => "#{permissions_path}/Microphone/Permission-Microphone.podspec"
+  pod 'Permission-Camera', :path => "#{permissions_path}/Camera/Permission-Camera.podspec"
+  pod 'RNVectorIcons', :path => '../node_modules/react-native-vector-icons'
+
+
+
+
+  pod 'React-RCTText', :path => '../node_modules/react-native/Libraries/Text', :modular_headers => true
+
 
   pod 'BVLinearGradient', :path => '../node_modules/react-native-linear-gradient'
 
-  pod 'react-native-text-input-mask', :path => '../node_modules/react-native-text-input-mask'
+  
+
+  # pod 'react-native-text-input-mask', :path => '../node_modules/react-native-text-input-mask'
 
   target 'CENTSTests' do
     inherit! :complete
@@ -26,9 +40,13 @@ target 'CENTS' do
   # Note that if you have use_frameworks! enabled, Flipper will not work and
   # you should disable the next line.
   use_flipper!()
+  pre_install do |installer|
+      $RNMapboxMaps.pre_install(installer)
+    end
 
   post_install do |installer|
     react_native_post_install(installer)
+    $RNMapboxMaps.post_install(installer)
     __apply_Xcode_12_5_M1_post_install_workaround(installer)
   end
 end

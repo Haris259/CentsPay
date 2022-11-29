@@ -5,6 +5,7 @@ import {
   Text,
   View,
   TouchableOpacity,
+  SafeAreaView,
 } from 'react-native';
 import React, {useEffect, useState} from 'react';
 import icon from '../../../../assets/icon';
@@ -12,6 +13,7 @@ import {countries} from '../../../data/data';
 import {useNavigation} from '@react-navigation/native';
 import {Cross} from '../../../../assets/SVG/svg';
 import {SvgXml} from 'react-native-svg';
+import Entypo from 'react-native-vector-icons/Entypo';
 const CountryCode = ({handleClick}) => {
   const navigation = useNavigation();
   const [data, setData] = useState(countries);
@@ -19,21 +21,20 @@ const CountryCode = ({handleClick}) => {
   const [items, setItems] = useState();
 
   return (
-    <View style={{flex: 1, alignItems: 'flex-end'}}>
+    <SafeAreaView style={{flex: 1, alignItems: 'flex-end'}}>
       <TouchableOpacity
         style={{
-          height: 68,
-          borderBottomWidth: 1,
-          alignItems: 'flex-end',
-          backgroundColor: '#ffffff',
-          width: 190,
-          borderColor: 'rgba(224, 224, 224, 1)',
-          justifyContent: 'center',
-          marginRight: 10,
+          backgroundColor: '#fff',
+          width: 200,
+          flexDirection: 'row-reverse',
+          paddingHorizontal: 10,
+          height: 40,
+          paddingVertical: 10,
         }}
         onPress={handleClick}>
         <SvgXml xml={Cross} />
       </TouchableOpacity>
+
       <FlatList
         style={{
           flex: 1,
@@ -88,7 +89,7 @@ const CountryCode = ({handleClick}) => {
       {/* {data.map(item => (
         <Text>{item.code}</Text>
       ))} */}
-    </View>
+    </SafeAreaView>
   );
 };
 

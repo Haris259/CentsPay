@@ -4,9 +4,10 @@ import NextBtn from '../../components/button/nextBtn';
 import BackBtn from '../../components/button/backBtn';
 import {Fonts} from '../../assets/font/fonts';
 import {colors} from '../../common/colors';
+import { SafeAreaView } from 'react-native-safe-area-context';
 const VerifyId = ({navigation}) => {
   return (
-    <View style={{flex: 1, backgroundColor: '#FAFAFA'}}>
+    <SafeAreaView style={{flex: 1, backgroundColor: '#FAFAFA'}}>
       <View style={{margin: 30}}>
         <View style={{marginTop: 30}}>
           <View style={{marginBottom: 25}}>
@@ -142,7 +143,7 @@ const VerifyId = ({navigation}) => {
           />
         </View>
       </View>
-    </View>
+    </SafeAreaView>
   );
 };
 

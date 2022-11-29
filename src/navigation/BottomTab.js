@@ -1,15 +1,13 @@
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import React from 'react';
 import {
-  StyleSheet,
-  Text,
-  TextInput,
-  TouchableOpacity,
   Image,
-  View,
+  
 } from 'react-native';
+import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons'
+import Ionicons from 'react-native-vector-icons/Ionicons'
 import HomeScreen from '../screen/Send/homeScreen';
-
+import {Fonts} from '../assets/font/fonts'
 const Tab = createBottomTabNavigator();
 
 function BottomTab() {
@@ -18,33 +16,40 @@ function BottomTab() {
       screenOptions={{
         tabBarStyle: {
           backgroundColor: '#eceef1',
-          paddingBottom: 5,
+          paddingBottom: 20,
         },
         tabBarInactiveTintColor: '#A8A8A8',
         tabBarActiveTintColor: '#EF5924',
+       
+       
         headerShown: false,
       }}>
       <Tab.Screen
         name="My cents"
         component={HomeScreen}
+        
         options={{
-          tabBarIcon: ({size}) => (
-            <Image
-              source={require('../assets/icon/CentsLogo.png')}
-              style={{height: size, width: size}}
-            />
-          ),
+       
+
+          tabBarIcon: ({size,focused}) => {
+            const image = focused 
+            ? require('../assets/icon/CentsLogo.png')
+            :require('../assets/icon/unactivelogo.jpeg') 
+            return (
+                <Image 
+                    source={image}
+                    style={{height:25,width:25,resizeMode:'contain'}}
+                />
+            )
+        }
         }}
       />
       <Tab.Screen
         name="Recipients"
         component={HomeScreen}
         options={{
-          tabBarIcon: ({size}) => (
-            <Image
-              source={require('../assets/icon/recept.png')}
-              style={{backgroundColor: 'rgba(236, 238, 241, 0.7)'}}
-            />
+          tabBarIcon: ({color, size}) => (
+            <Ionicons name="ios-people-sharp" color={color} size={size} />
           ),
         }}
       />
@@ -52,12 +57,14 @@ function BottomTab() {
         name="Invite"
         component={HomeScreen}
         options={{
-          tabBarIcon: ({size}) => (
-            <Image
-              source={require('../assets/icon/gift.png')}
-              style={{height: size, width: size}}
-            />
-          ),
+        
+            tabBarLabel: 'Invite',
+          
+          
+            tabBarIcon: ({color, size}) => (
+              <MaterialCommunityIcons name="gift" color={color} size={size} />
+            ),
+          
         }}
       />
     </Tab.Navigator>

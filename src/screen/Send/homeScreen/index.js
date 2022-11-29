@@ -6,6 +6,7 @@ import {useNavigation} from '@react-navigation/native';
 import {ProfilePicture, Rocket} from '../../../assets/SVG/svg';
 import {SvgXml} from 'react-native-svg';
 import {globalStyles} from '../../../common/styles';
+import { SafeAreaView } from 'react-native-safe-area-context';
 
 const HomeScreen = ({route}) => {
   const navigation = useNavigation();
@@ -14,7 +15,7 @@ const HomeScreen = ({route}) => {
     console.log(data);
   }, []);
   return (
-    <View style={styles.container}>
+    <SafeAreaView style={styles.container}>
       <TouchableOpacity
         style={styles.profile}
         onPress={() => navigation.navigate('account')}>
@@ -40,7 +41,7 @@ const HomeScreen = ({route}) => {
           />
         </View>
       </View>
-    </View>
+    </SafeAreaView>
   );
 };
 const styles = StyleSheet.create({

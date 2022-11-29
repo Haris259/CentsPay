@@ -1,5 +1,5 @@
-import {StyleSheet, Text, View, ScrollView} from 'react-native';
-import React, {useState} from 'react';
+import {StyleSheet, Text, View, ScrollView,Keyboard} from 'react-native';
+import React, {useState,useRef,useEffect} from 'react';
 import MainHeading from '../../../components/heading/mainHeading';
 import PrimaryInput from '../../../components/inputs/primaryInput';
 import NextBtn from '../../../components/button/nextBtn';
@@ -7,15 +7,38 @@ import BackBtn from '../../../components/button/backBtn';
 import {isValidObjField, updateError} from '../../../common/method';
 import {globalStyles} from '../../../common/styles';
 import {KeyboardAwareScrollView} from 'react-native-keyboard-aware-scrollview';
+import { SafeAreaView } from 'react-native-safe-area-context';
 
 const Register = ({navigation}) => {
+
+
+  const [keyboardOffset, setKeyboardOffset] = useState(0);
+  const onKeyboardShow = event => setKeyboardOffset(event.endCoordinates.height);
+  const onKeyboardHide = () => setKeyboardOffset(0);
+  const keyboardDidShowListener = useRef();
+  const keyboardDidHideListener = useRef();
+  
+  useEffect(() => {
+    keyboardDidShowListener.current = Keyboard.addListener('keyboardWillShow', onKeyboardShow);
+    keyboardDidHideListener.current = Keyboard.addListener('keyboardWillHide', onKeyboardHide);
+  
+    return () => {
+      keyboardDidShowListener.current.remove();
+      keyboardDidHideListener.current.remove();
+    };
+  }, []);
+
+
+
+
+
   const [userInfo, setUserInfo] = useState({
     firstName: '',
     lastName: '',
-    email: '',
+    // email: '',
   });
   const [error, setError] = useState('');
-  const {firstName, lastName, email} = userInfo;
+  const {firstName, lastName, } = userInfo;
   const handleOnChangeText = (value, fieldName) => {
     setUserInfo({...userInfo, [fieldName]: value});
   };
@@ -33,13 +56,14 @@ const Register = ({navigation}) => {
     }
   };
   return (
-    <View style={styles.container}>
+    <SafeAreaView style={styles.container}>
       <View style={styles.heading}>
-        <Text style={globalStyles.miniHeading}>Tell us a bit about</Text>
+        <Text style={globalStyles.miniHeading}>Tell us a bit about ggg</Text>
         <Text style={globalStyles.miniHeading}>yourself</Text>
       </View>
+      {/* <KeyboardAwareScrollView> */}
       <View style={styles.keyboardScroll}>
-        <KeyboardAwareScrollView style={{flex: 1}}>
+        
           <PrimaryInput
             placeholder="First Name"
             // label="First Name"
@@ -58,22 +82,26 @@ const Register = ({navigation}) => {
           {error ? <Text style={styles.errorText}>{error}</Text> : null}
           <PrimaryInput
             placeholder="Email (optional)"
-            // label="Email"
-            value={email}
+            onSubmitEditing={Keyboard.dismiss}
+            label="Email"
+            // value={email}
             keyboardType="email-address"
             onChangeText={value => handleOnChangeText(value, 'email')}
             activeOutlineColor={error ? '#CE1A2B' : 'rgba(218, 218, 218, 1)'}
           />
-          {error ? <Text style={styles.errorText}>{error}</Text> : null}
-        </KeyboardAwareScrollView>
+         
+          
+          {/* {error ? <Text style={styles.errorText}>{error}</Text> : null} */}
       </View>
+        {/* </KeyboardAwareScrollView> */}
+
       <View style={styles.btnContainer}>
         <View style={styles.btn}>
           <BackBtn title="Back" onPress={() => navigation.goBack()} />
           <NextBtn title="Continue" onPress={submitForm} />
         </View>
       </View>
-    </View>
+    </SafeAreaView>
   );
 };
 const styles = StyleSheet.create({

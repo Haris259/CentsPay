@@ -2,13 +2,14 @@ import {StyleSheet, Text, View, Image, TouchableOpacity} from 'react-native';
 import React, {useState} from 'react';
 import icon from '../../../../assets/icon';
 import {Fonts} from '../../../../assets/font/fonts';
-
+import Svg,{Rect,Mask,Circle,G,Path} from 'react-native-svg';
 import {ArrowBack, Edit} from '../../../../assets/SVG/svg';
 import {SvgXml} from 'react-native-svg';
+import { SafeAreaView } from 'react-native-safe-area-context';
 const CardBankAccount = ({navigation}) => {
   const [showCardNumber, setShowCardNumber] = useState(false);
   return (
-    <View style={{flex: 1, backgroundColor: '#FAFAFA'}}>
+    <SafeAreaView style={{flex: 1, backgroundColor: '#FAFAFA'}}>
       <View style={{margin: 30}}>
         <TouchableOpacity onPress={() => navigation.goBack()}>
           <SvgXml xml={ArrowBack} />
@@ -136,7 +137,7 @@ const CardBankAccount = ({navigation}) => {
           </View>
         </View>
       </View>
-    </View>
+    </SafeAreaView>
   );
 };
 

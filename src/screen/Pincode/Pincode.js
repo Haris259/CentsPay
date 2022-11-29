@@ -1,22 +1,33 @@
-import {StyleSheet, Text, View, Image, TouchableOpacity} from 'react-native';
-import React, {useState} from 'react';
+import {StyleSheet, Text, View, Image, TouchableOpacity,} from 'react-native';
+import React, {useEffect, useState} from 'react';
 import icon from '../../assets/icon';
 import {globalStyles} from '../../common/styles';
 import VirtualKeyboard from 'react-native-virtual-keyboard';
 import {useNavigation} from '@react-navigation/native';
 import SmoothPinCodeInput from 'react-native-smooth-pincode-input';
+import { SafeAreaView } from 'react-native-safe-area-context';
+
 const Pincode = () => {
   const navigation = useNavigation();
-  const [code, setCode] = useState();
+  const [code, setCode] = useState('');
   const changeText = text => {
     setCode(text);
+ 
   };
+
+  useEffect(()=> {
+    console.log(code);
+    if(code.length > 3) {
+      navigation.navigate('register')
+    }
+  }, [code])
   return (
-    <View style={styles.container}>
+    <SafeAreaView style={styles.container}>
       <View style={styles.logo}>
         <Image source={icon.logo} />
       </View>
       <View style={{alignItems: 'center'}}>
+      
         <Text style={globalStyles.miniHeading}>Welcome back!</Text>
         <Text style={globalStyles.grayHeading2}>Enter Passcode to unlock</Text>
         <View style={{marginTop: 30}}>
@@ -62,11 +73,13 @@ const Pincode = () => {
           onTextChange={setCode}
           rowStyle={{margin: 10}}
         />
+        <View>
         <TouchableOpacity
           onPress={() => navigation.navigate('forgotPassword')}
           style={styles.forgot}>
-          <Text style={globalStyles.forgotBtnText}>Forgot ?</Text>
+          <Text style={globalStyles.forgotBtnText}>Forgot Passcode?</Text>
         </TouchableOpacity>
+        </View>
         <View style={styles.btnContainer}>
           <Text style={globalStyles.grayText}>Don't have an account?</Text>
           <TouchableOpacity onPress={() => navigation.navigate('register')}>
@@ -74,7 +87,7 @@ const Pincode = () => {
           </TouchableOpacity>
         </View>
       </View>
-    </View>
+    </SafeAreaView>
   );
 };
 
@@ -94,17 +107,18 @@ const styles = StyleSheet.create({
     justifyContent: 'flex-end',
   },
   forgot: {
-    marginHorizontal: 80,
-    // backgroundColor: 'red',
-    width: 70,
-    position: 'relative',
-    bottom: 29,
+    flexDirection:'row',
+    justifyContent:'flex-end',
+    marginHorizontal:74,
+    marginVertical:10
   },
   btnContainer: {
-    marginHorizontal: 30,
+   
     marginTop: 50,
     flexDirection: 'row',
     marginBottom: 10,
     alignItems: 'center',
+    // backgroundColor:'red',
+    justifyContent:'center'
   },
 });

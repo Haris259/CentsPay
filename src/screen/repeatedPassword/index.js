@@ -6,6 +6,7 @@ import SecondaryButton from '../../components/button/secondaryButton';
 import {useNavigation} from '@react-navigation/native';
 import SmoothPinCodeInput from 'react-native-smooth-pincode-input';
 import {Fonts} from '../../assets/font/fonts';
+import { SafeAreaView } from 'react-native-safe-area-context';
 
 const RepeatedPassword = () => {
   const navigation = useNavigation();
@@ -15,7 +16,7 @@ const RepeatedPassword = () => {
     setCode(text);
   };
   return (
-    <View style={styles.container}>
+    <SafeAreaView style={styles.container}>
       <View style={styles.heading}>
         <Text style={globalStyles.miniHeadingBlack2}>Repeat Passcode</Text>
         <Text
@@ -73,7 +74,7 @@ const RepeatedPassword = () => {
           />
         </View>
       </View>
-    </View>
+    </SafeAreaView>
   );
 };
 

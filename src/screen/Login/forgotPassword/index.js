@@ -1,4 +1,4 @@
-import {StyleSheet, Text, View, TextInput} from 'react-native';
+import {StyleSheet, Text, View, TouchableOpacity} from 'react-native';
 import React, {useState} from 'react';
 import {globalStyles} from '../../../common/styles';
 import MainHeading from '../../../components/heading/mainHeading';
@@ -6,7 +6,8 @@ import VirtualKeyboard from 'react-native-virtual-keyboard';
 import SecondaryButton from '../../../components/button/secondaryButton';
 import {useNavigation} from '@react-navigation/native';
 import {Fonts} from '../../../assets/font/fonts';
-import {TextInputMask} from 'react-native-masked-text';
+import TextInputMask from 'react-native-text-input-mask';
+import LinearGradient from 'react-native-linear-gradient';
 const ForgotPassword = () => {
   const navigation = useNavigation();
   const [text, setText] = useState();
@@ -20,7 +21,7 @@ const ForgotPassword = () => {
         <Text style={globalStyles.miniHeading}>Forgot Passcode</Text>
       </View>
       <View style={{margin: 30}}>
-        <Text style={globalStyles.text}>Enter your Phone Number</Text>
+        <Text style={[globalStyles.text,{paddingVertical:10,paddingHorizontal:4}]}>Enter your Phone Number</Text>
         <TextInputMask
           type={'cel-phone'}
           style={{
@@ -58,12 +59,32 @@ const ForgotPassword = () => {
           clearOnLongPress={true}
           rowStyle={styles.keypad}
         />
-        <View style={styles.btn}>
+        {/* <View style={styles.btn}>
           <SecondaryButton
             title="Continue"
             onPress={() => navigation.navigate('otp')}
           />
-        </View>
+        </View> */}
+
+    <LinearGradient
+      style={{borderRadius: 50, elevation: 6,height:50,width:200,justifyContent:'center',alignItems:'center',alignSelf:'center'}}
+      // colors={['#5ED2A0', '#339CB1']}
+      colors={[
+        '#d84d5b',
+        '#dc5d4f',
+      ]}
+      start={{x: 0, y: 0}} end={{x: 1, y: 0}}
+      
+      >
+      <TouchableOpacity onPress={() => navigation.navigate('otp')} >
+        <Text style={{color:'#fff',fontFamily:Fonts.medium}}>Continue</Text>
+      </TouchableOpacity>
+    </LinearGradient>
+
+
+
+
+        {/* ///// */}
       </View>
     </View>
   );

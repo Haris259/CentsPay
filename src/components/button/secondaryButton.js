@@ -13,7 +13,9 @@ const SecondaryButton = ({title, onPress, style}) => {
         height: 55,
         elevation: 5,
       }}
-      colors={['rgba(216, 78, 91, 1 )', 'rgba(216, 78, 91, 0.7)']}>
+      colors={['rgba(216, 78, 91, 1 )','rgba(216, 78, 91, 1 )','rgba(216, 78, 91, 1 )', 'rgba(216, 78, 91, 0.7)']}
+      start={{x: 0, y: 0}} end={{x: 1, y: 0}}
+      >
       <TouchableOpacity onPress={onPress} style={[styles.btnContainer]}>
         <Text style={globalStyles.btnText}>{title}</Text>
       </TouchableOpacity>

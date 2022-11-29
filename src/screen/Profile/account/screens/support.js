@@ -15,6 +15,7 @@ import {data} from '../items/data';
 import {Fonts} from '../../../../assets/font/fonts';
 import {ArrowBack, Edit} from '../../../../assets/SVG/svg';
 import {SvgXml} from 'react-native-svg';
+import { SafeAreaView } from 'react-native-safe-area-context';
 const Support = ({navigation}) => {
   const [message, setMessage] = useState(data);
   const [displayMessage, setDisplayMessage] = useState('');
@@ -80,7 +81,7 @@ const Support = ({navigation}) => {
   const sheetRef = React.useRef(null);
   return (
     <>
-      <View style={{flex: 1, backgroundColor: '#FAFAFA'}}>
+      <SafeAreaView style={{flex: 1, backgroundColor: '#FAFAFA'}}>
         <View style={{flex: 1, margin: 30}}>
           <TouchableOpacity onPress={() => navigation.goBack()}>
             <SvgXml xml={ArrowBack} />
@@ -140,6 +141,7 @@ const Support = ({navigation}) => {
               }}
               placeholderTextColor="#A8A8A8"
               placeholder="Ask your question or describe the issue"
+              multiline={true}
             />
           </View>
           <View style={{marginTop: 20}}>
@@ -167,6 +169,8 @@ const Support = ({navigation}) => {
                 paddingHorizontal: 10,
               }}
               keyboardType="email-address"
+              multiline={true}
+
             />
           </View>
           <View style={{flex: 1, justifyContent: 'flex-end'}}>
@@ -193,7 +197,7 @@ const Support = ({navigation}) => {
             </TouchableOpacity>
           </View>
         </View>
-      </View>
+      </SafeAreaView>
       <BottomSheet
         ref={sheetRef}
         snapPoints={[450, 300, 0]}

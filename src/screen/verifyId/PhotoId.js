@@ -12,26 +12,55 @@ const PhotoId = ({navigation}) => {
   const [checkboxIdentity, setCheckboxIdentity] = useState(false);
   const [checkboxPermit, setCheckboxPermit] = useState(false);
 
-  const passport = () => {
-    setCheckboxPassport(!checkboxPassport);
+  const passport = index => {
+    console.log(index)
+    if(index==0){
+    setCheckboxPassport(true);
+    setCheckboxLicense(false);
+    setCheckboxIdentity(false);
+    setCheckboxPermit(false);
+  }
     setTimeout(() => {
       navigation.navigate('verifyId2');
     }, 200);
   };
-  const driverLicense = () => {
-    setCheckboxLicense(!checkboxLicense);
+  const driverLicense = index => {
+    console.log(index)
+    if(index==1){
+      setCheckboxPassport(false);
+      setCheckboxLicense(true);
+      setCheckboxIdentity(false);
+      setCheckboxPermit(false);
+    }
+    // setCheckboxLicense(!checkboxLicense);
     setTimeout(() => {
       navigation.navigate('verifyId2');
     }, 200);
   };
-  const identityCard = () => {
-    setCheckboxIdentity(!checkboxIdentity);
+  const identityCard = index => {
+    console.log(index)
+
+    if(index==2){
+      setCheckboxPassport(false);
+      setCheckboxLicense(false);
+      setCheckboxIdentity(true);
+      setCheckboxPermit(false);
+    }
+    // setCheckboxIdentity(!checkboxIdentity);
     setTimeout(() => {
       navigation.navigate('verifyId2');
     }, 200);
   };
-  const scanResidence = () => {
-    setCheckboxPermit(!checkboxPermit);
+  const scanResidence = index => {
+    console.log(index)
+
+    if(index==3){
+      setCheckboxPassport(false);
+      setCheckboxLicense(false);
+      setCheckboxIdentity(false);
+      setCheckboxPermit(true);
+    }
+    // setCheckboxPermit(!checkboxPermit);
     setTimeout(() => {
       navigation.navigate('verifyId2');
     }, 200);
@@ -66,7 +95,7 @@ const PhotoId = ({navigation}) => {
             justifyContent: 'space-between',
             borderRadius: 5,
           }}
-          onPress={passport}>
+          onPress={()=> passport(0)}>
           <Text
             style={{
               fontSize: 15,
@@ -103,7 +132,7 @@ const PhotoId = ({navigation}) => {
             justifyContent: 'space-between',
             borderRadius: 5,
           }}
-          onPress={driverLicense}>
+          onPress={()=> driverLicense(1)}>
           <Text
             style={{
               fontSize: 15,
@@ -140,7 +169,7 @@ const PhotoId = ({navigation}) => {
             justifyContent: 'space-between',
             borderRadius: 5,
           }}
-          onPress={identityCard}>
+          onPress={()=>identityCard(2)}>
           <Text
             style={{
               fontSize: 15,
@@ -177,7 +206,7 @@ const PhotoId = ({navigation}) => {
             justifyContent: 'space-between',
             borderRadius: 5,
           }}
-          onPress={scanResidence}>
+          onPress={()=>scanResidence(3)}>
           <Text
             style={{
               fontSize: 15,
@@ -212,9 +241,9 @@ const PhotoId = ({navigation}) => {
           }}>
           <BackBtn title="Back" onPress={() => navigation.goBack()} />
           {checkboxPassport ? (
-            <NextBtn title={'Continue'} />
+            <NextBtn title={'continue'} />
           ) : (
-            <BackBtn title="Continue" />
+            <BackBtn onPress={() => navigation.navigate('passport')} title="Scane" />
           )}
         </View>
       </View>

@@ -15,10 +15,11 @@ import PrimaryInput from '../../../components/inputs/primaryInput';
 import {Fonts} from '../../../assets/font/fonts';
 import {Card} from '../../../assets/SVG/svg';
 import {SvgXml} from 'react-native-svg';
+import { SafeAreaView } from 'react-native-safe-area-context';
 
 const SendMoneyToCard = ({navigation}) => {
   return (
-    <View
+    <SafeAreaView
       style={{
         flex: 1,
         backgroundColor: '#FAFAFF',
@@ -87,7 +88,7 @@ const SendMoneyToCard = ({navigation}) => {
           />
         </View>
       </View>
-    </View>
+    </SafeAreaView>
   );
 };
 

@@ -5,6 +5,7 @@ import {
   FlatList,
   Image,
   StyleSheet,
+  SafeAreaView,
 } from 'react-native';
 import React, {useEffect, useState} from 'react';
 import CloseBtn from '../../../components/button/closeBtn';
@@ -23,7 +24,7 @@ const SelectCountry = ({navigation}) => {
   const [flag, setFlag] = useState(countries);
 
   return (
-    <View style={styles.container}>
+    <SafeAreaView style={styles.container}>
       {/* <TouchableOpacity style={{marginHorizontal: 20, marginTop: 50}}>
         <Entypo name="cross" size={20} color="rgba(45, 45, 45, 1)" />
       </TouchableOpacity> */}
@@ -93,7 +94,7 @@ const SelectCountry = ({navigation}) => {
           </View>
         </View>
       </View>
-    </View>
+    </SafeAreaView>
   );
 };
 const styles = StyleSheet.create({

@@ -6,7 +6,7 @@ import {
   Image,
   View,
 } from 'react-native';
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import {globalStyles} from '../../../common/styles';
 import MainHeading from '../../../components/heading/mainHeading';
 import VirtualKeyboard from 'react-native-virtual-keyboard';
@@ -14,16 +14,25 @@ import SecondaryButton from '../../../components/button/secondaryButton';
 import {Fonts} from '../../../assets/font/fonts';
 import SmoothPinCodeInput from 'react-native-smooth-pincode-input';
 import RoundedButton from '../../../components/button/roundedButton';
+import { SafeAreaView } from 'react-native-safe-area-context';
 
 const SignUpPassword = ({navigation}) => {
   const [text, setText] = useState();
-  const [code, setCode] = useState();
+  const [code, setCode] = useState('');
 
   const changeText = text => {
     setCode(text);
   };
+
+  // useEffect(() => {
+  //   console.log(code,"***********Haris");
+  //   if(code.length ===4){
+  //     navigation.navigate('signupRepeatPassword')
+  //   }
+  // }, [code]);
+
   return (
-    <View style={styles.container}>
+    <SafeAreaView style={styles.container}>
       <View style={styles.heading}>
         <Text style={globalStyles.miniHeadingBlack2}>Passcode</Text>
         <Text style={globalStyles.grayText2}>
@@ -70,13 +79,20 @@ const SignUpPassword = ({navigation}) => {
           clearOnLongPress={true}
         />
         <View style={styles.btn}>
-          <RoundedButton
-            title={'Continue'}
-            onPress={() => navigation.navigate('signupRepeatPassword')}
-          />
+          {code.length >=4?
+            <SecondaryButton 
+              title={'Continue'}
+              onPress={() => navigation.navigate('signupRepeatPassword')}
+            />
+            :
+            <RoundedButton
+              title={'Continue'}
+              onPress={() => navigation.navigate('signupRepeatPassword')}
+            />
+          }
         </View>
       </View>
-    </View>
+    </SafeAreaView>
   );
 };
 

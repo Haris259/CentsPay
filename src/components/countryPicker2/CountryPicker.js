@@ -5,6 +5,7 @@ import {
   Text,
   View,
   TouchableOpacity,
+  SafeAreaView,
 } from 'react-native';
 import React, {useEffect, useState} from 'react';
 import icon from '../../assets/icon';
@@ -17,17 +18,21 @@ const CountryPicker = ({handleClick}) => {
   const [data, setData] = useState(countries);
   const [selectCountry, setSelectedCountry] = useState([]);
   return (
-    <View style={{flex: 1, alignItems: 'flex-end'}}>
+    <SafeAreaView style={{flex: 1, alignItems: 'flex-end'}}>
       <TouchableOpacity
         style={{
-          height: 68,
-          width: 190,
-          backgroundColor: '#ffffff',
+          height: 50,
+          width: 200,
+          backgroundColor: '#fff',
           borderBottomWidth: 1,
           alignItems: 'flex-end',
           borderColor: 'rgba(224, 224, 224, 1)',
-          justifyContent: 'center',
-          marginRight: 10,
+          // justifyContent: 'center',
+          // marginRight: 10,
+          paddingVertical:20,
+          paddingHorizontal:15,
+      
+       
         }}
         onPress={handleClick}>
         <SvgXml xml={Cross} />
@@ -82,7 +87,7 @@ const CountryPicker = ({handleClick}) => {
       {/* {data.map(item => (
         <Text>{item.code}</Text>
       ))} */}
-    </View>
+    </SafeAreaView>
   );
 };
 

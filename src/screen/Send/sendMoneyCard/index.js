@@ -6,12 +6,13 @@ import {Fonts} from '../../../assets/font/fonts';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import {Bank, Card} from '../../../assets/SVG/svg';
 import {SvgXml} from 'react-native-svg';
+import { SafeAreaView } from 'react-native-safe-area-context';
 
 const SendMoneyCard = ({navigation}) => {
   const [touchableBank, setTouchableBank] = useState(false);
   const [touchableCard, setTouchableCard] = useState(false);
   return (
-    <View style={styles.container}>
+    <SafeAreaView style={styles.container}>
       <View style={styles.heading}>
         <TouchableOpacity onPress={() => navigation.goBack()}>
           <Ionicons
@@ -29,8 +30,8 @@ const SendMoneyCard = ({navigation}) => {
             fontFamily: Fonts.semiBold,
             width: 290,
           }}>
-          Select how to send your money
-        </Text>
+          Select how to send your money 
+        </Text> 
         <TouchableOpacity
           style={{
             height: 200,
@@ -272,7 +273,7 @@ const SendMoneyCard = ({navigation}) => {
           </View>
         </TouchableOpacity>
       </View>
-    </View>
+    </SafeAreaView>
   );
 };
 

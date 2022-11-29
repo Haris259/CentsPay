@@ -25,7 +25,7 @@ const CamPicker = () => {
       });
     });
   };
-  console.log('camhvjhvj', snap);
+  console.log('Harris', snap);
   return (
     <View style={{marginTop: 30}}>
       {/* <TouchableOpacity

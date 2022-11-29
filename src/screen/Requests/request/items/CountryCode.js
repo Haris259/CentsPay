@@ -21,14 +21,15 @@ const CountryCode = ({handleClick}) => {
     <View style={{flex: 1, alignItems: 'flex-end'}}>
       <TouchableOpacity
         style={{
-          height: 68,
+          height: 58,
           borderBottomWidth: 1,
           alignItems: 'flex-end',
           backgroundColor: '#ffffff',
-          width: 190,
+          width: 200,
           borderColor: 'rgba(224, 224, 224, 1)',
           justifyContent: 'center',
-          marginRight: 10,
+          paddingHorizontal: 15,
+          marginTop:20
         }}
         onPress={handleClick}
         activeOpacity={0.9}>

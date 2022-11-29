@@ -15,6 +15,8 @@ import Animated from 'react-native-reanimated';
 import BottomSheet from 'reanimated-bottom-sheet';
 import {BottomNavigation} from 'react-native-paper';
 import {Fonts} from '../../../../assets/font/fonts';
+import Ionicons from 'react-native-vector-icons/Ionicons'
+
 const PaymentSummary = ({navigation}) => {
   const [visble, setVisible] = useState(false);
   const [displayMessage, setDisplayMessage] = useState('');
@@ -113,11 +115,18 @@ const PaymentSummary = ({navigation}) => {
   const sheetRef = React.useRef(null);
   return (
     <>
-      <View style={{flex: 1, backgroundColor: '#FAFAFF'}}>
+      <View style={{flex: 1, backgroundColor: '#FAFAFF',paddingTop:20}}>
         <View style={{flex: 1, margin: 30}}>
-          <TouchableOpacity onPress={() => navigation.goBack()}>
-            <Image source={icon.arrowBackRed} />
-          </TouchableOpacity>
+        <TouchableOpacity
+        style={{ marginTop: 10}}
+        onPress={() => navigation.goBack()}>
+        <Ionicons
+          name="ios-chevron-back"
+          size={30}
+          // style={{backgroundColor: 'red'}}
+          color="rgba(219, 92, 79, 1)"
+        />
+      </TouchableOpacity>
           <Text
             style={{
               fontSize: 25,

@@ -1,16 +1,18 @@
-import {StyleSheet, Text, View, Modal, Image} from 'react-native';
+import {StyleSheet, Text, View, Image} from 'react-native';
 import React from 'react';
 import icon from '../../../../assets/icon';
 import PrimaryButton from '../../../../components/button/primaryButton';
 import {useNavigation} from '@react-navigation/native';
 import {Fonts} from '../../../../assets/font/fonts';
-const ModalPopUp = ({modalVisible, closeModal}) => {
+import Modal from 'react-native-modal'
+const ModalPopUp = ({modalVisible, closeModal}) => {  
   const navigation = useNavigation();
   return (
     <View style={{flex: 1}}>
       <Modal
         animationType="slide"
         visible={modalVisible}
+        onBackdropPress={closeModal}
         transparent={true}
         hardwareAccelerated={true}>
         <View style={styles.modalView}>
@@ -95,7 +97,7 @@ const ModalPopUp = ({modalVisible, closeModal}) => {
           }}>
           <PrimaryButton
             title="Go back and edit"
-            onPress={() => navigation.navigate('howToPay')}
+            onPress={() => {closeModal(),navigation.navigate('howToPay')}}
           />
         </View>
       </Modal>

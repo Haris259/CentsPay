@@ -7,10 +7,11 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 import {User, Mobile} from '../../../assets/SVG/svg';
 import {SvgXml} from 'react-native-svg';
 import {globalStyles} from '../../../common/styles';
+import { SafeAreaView } from 'react-native-safe-area-context';
 
 const HowToSendMoney = ({navigation}) => {
   return (
-    <View style={styles.container}>
+    <SafeAreaView style={styles.container}>
       <TouchableOpacity onPress={() => navigation.goBack()} style={styles.icon}>
         <Ionicons
           name="ios-chevron-back"
@@ -52,7 +53,7 @@ const HowToSendMoney = ({navigation}) => {
         style={[globalStyles.grayText2, {marginTop: 30, marginHorizontal: 30}]}>
         NO RECENT
       </Text>
-    </View>
+    </SafeAreaView>
   );
 };
 
