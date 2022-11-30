@@ -4,7 +4,7 @@ import {globalStyles} from '../../../../common/styles';
 import ModalCode from '../items/modalCode';
 import {Fonts} from '../../../../assets/font/fonts';
 import icon from '../../../../assets/icon';
-import TextInputMask from 'react-native-text-input-mask';
+// import TextInputMask from 'react-native-text-input-mask';
 import VirtualKeyboard from 'react-native-virtual-keyboard';
 import SecondaryButton from '../../../../components/button/secondaryButton';
 import { SafeAreaView } from 'react-native-safe-area-context';
@@ -63,7 +63,7 @@ const RequestPhoneNumber = ({navigation, route}) => {
           )}
 
           <Text style={(globalStyles.text, {marginTop: 25})}>Phone Number</Text>
-          <TextInputMask
+          {/* <TextInputMask
             type={'cel-phone'}
             style={styles.inputMask}
             options={{
@@ -76,7 +76,7 @@ const RequestPhoneNumber = ({navigation, route}) => {
             onChangeText={text => {
               setText(text);
             }}
-          />
+          /> */}
         </View>
         <View style={styles.keyboard}>
           <VirtualKeyboard

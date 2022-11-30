@@ -1,5 +1,4 @@
 import {StyleSheet, Text, Image, View, TouchableOpacity,StatusBar} from 'react-native';
-import CountryPicker from 'react-native-country-picker-modal';
 import {TextInput} from 'react-native-paper';
 import React, {useEffect, useState} from 'react';
 import {globalStyles} from '../../../common/styles';
@@ -7,7 +6,7 @@ import MainHeading from '../../../components/heading/mainHeading';
 import VirtualKeyboard from 'react-native-virtual-keyboard';
 import SecondaryButton from '../../../components/button/secondaryButton';
 import icon from '../../../assets/icon';
-import TextInputMask from 'react-native-text-input-mask';
+// import TextInputMask from 'react-native-text-input-mask';
 
 import ModalCode from './items/modalCode';
 import {Fonts} from '../../../assets/font/fonts';
@@ -80,7 +79,7 @@ const PhoneNumber = ({navigation, route}) => {
             </TouchableOpacity>
           )}
           <Text style={[globalStyles.text, {marginTop: 25}]}>Phone Number</Text>
-          <TextInputMask
+          {/* <TextInputMask
             type={'cel-phone'}
             style={styles.textInputMask}
             options={{
@@ -94,7 +93,7 @@ const PhoneNumber = ({navigation, route}) => {
               setText(text);
             }}
             ref={ref => (this.phoneField = ref)}
-          />
+          /> */}
         </View>
         <View style={styles.keyboard}>
           <VirtualKeyboard

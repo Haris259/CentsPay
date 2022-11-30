@@ -28,7 +28,7 @@ const CounteryPicker = ({withAlphaFilter,withCallingCode,withCallingCodeButton})
         />
         {user?.countryPicker?.name && (
          
-         <Text style={styles.countryName,{alignSelf:"center",fontSize:15,fontWeight:"500"}}>{user?.countryPicker?.name}</Text>
+         <Text style={[styles.countryName,{alignSelf:"center",fontSize:15,fontWeight:"500"}]}>{user?.countryPicker?.name}</Text>
        
        )}
       </View>

@@ -8,11 +8,10 @@ import {
   TextInput,
   SafeAreaView
 } from 'react-native';
-import CountryPicker from 'react-native-country-picker-modal';
 import React, {useState} from 'react';
 import {globalStyles} from '../../../common/styles';
 import MainHeading from '../../../components/heading/mainHeading';
-import TextInputMask from 'react-native-text-input-mask';
+// import TextInputMask from 'react-native-text-input-mask';
 import VirtualKeyboard from 'react-native-virtual-keyboard';
 import SecondaryButton from '../../../components/button/secondaryButton';
 import icon from '../../../assets/icon';
@@ -74,7 +73,7 @@ const SendMoneyBymb = ({navigation, route}) => {
           )}
 
           <Text style={(globalStyles.text, {marginTop: 25})}>Phone Number</Text>
-          <TextInputMask
+          {/* <TextInputMask
             type={'cel-phone'}
             style={styles.inputMask}
             options={{
@@ -87,7 +86,7 @@ const SendMoneyBymb = ({navigation, route}) => {
             onChangeText={text => {
               setText(text);
             }}
-          />
+          /> */}
         </View>
         <View style={styles.keyboard}>
           <VirtualKeyboard

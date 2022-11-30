@@ -1,11 +1,12 @@
-import {StyleSheet, Text, View, Image, TouchableOpacity,} from 'react-native';
+import {StyleSheet, Text, View, Image, TouchableOpacity,SafeAreaView} from 'react-native';
 import React, {useEffect, useState} from 'react';
 import icon from '../../assets/icon';
 import {globalStyles} from '../../common/styles';
 import VirtualKeyboard from 'react-native-virtual-keyboard';
 import {useNavigation} from '@react-navigation/native';
 import SmoothPinCodeInput from 'react-native-smooth-pincode-input';
-import { SafeAreaView } from 'react-native-safe-area-context';
+import { Fonts } from '../../assets/font/fonts';
+import { colors } from '../../common/colors';
 
 const Pincode = () => {
   const navigation = useNavigation();
@@ -31,7 +32,7 @@ const Pincode = () => {
         <Text style={globalStyles.miniHeading}>Welcome back!</Text>
         <Text style={globalStyles.grayHeading2}>Enter Passcode to unlock</Text>
         <View style={{marginTop: 30}}>
-          <SmoothPinCodeInput
+          {/* <SmoothPinCodeInput
             placeholder={
               <View
                 style={{
@@ -60,7 +61,7 @@ const Pincode = () => {
             value={code}
             onTextChange={setCode}
             editable={false}
-          />
+          /> */}
         </View>
       </View>
       <View style={styles.keyboard}>
@@ -77,13 +78,20 @@ const Pincode = () => {
         <TouchableOpacity
           onPress={() => navigation.navigate('forgotPassword')}
           style={styles.forgot}>
-          <Text style={globalStyles.forgotBtnText}>Forgot Passcode?</Text>
+          <Text style={{    fontSize: 15,
+    lineHeight: 18,
+    fontFamily: Fonts.regular,
+    color: colors.black,
+    letterSpacing: -0.4,
+              // numOfLines: 1
+            }
+            }>Forgot Passcode?</Text>
         </TouchableOpacity>
         </View>
         <View style={styles.btnContainer}>
           <Text style={globalStyles.grayText}>Don't have an account?</Text>
           <TouchableOpacity onPress={() => navigation.navigate('register')}>
-            <Text style={[globalStyles.redText, {marginLeft: 5}]}>Sign Up</Text>
+            <Text style={globalStyles.redText}>Sign Up</Text>
           </TouchableOpacity>
         </View>
       </View>

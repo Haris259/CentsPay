@@ -14,9 +14,6 @@ import {globalStyles} from '../../../common/styles';
 import {countries} from '../../data/data';
 import AlphabetList from 'react-native-flatlist-alphabet';
 import Entypo from 'react-native-vector-icons/Entypo';
-import CountryPicker, {
-  getAllCountries,
-} from 'react-native-country-picker-modal';
 import {Fonts} from '../../../assets/font/fonts';
 import {colors} from '../../../common/colors';
 const NORTH_AMERICA = ['US'];

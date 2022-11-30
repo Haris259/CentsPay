@@ -6,7 +6,7 @@ import VirtualKeyboard from 'react-native-virtual-keyboard';
 import SecondaryButton from '../../../components/button/secondaryButton';
 import {useNavigation} from '@react-navigation/native';
 import {Fonts} from '../../../assets/font/fonts';
-import TextInputMask from 'react-native-text-input-mask';
+// import TextInputMask from 'react-native-text-input-mask';
 import LinearGradient from 'react-native-linear-gradient';
 const ForgotPassword = () => {
   const navigation = useNavigation();
@@ -22,7 +22,7 @@ const ForgotPassword = () => {
       </View>
       <View style={{margin: 30}}>
         <Text style={[globalStyles.text,{paddingVertical:10,paddingHorizontal:4}]}>Enter your Phone Number</Text>
-        <TextInputMask
+        {/* <TextInputMask
           type={'cel-phone'}
           style={{
             fontFamily: Fonts.medium,
@@ -49,7 +49,7 @@ const ForgotPassword = () => {
           }}
           // add the ref to a local var
           ref={ref => (this.phoneField = ref)}
-        />
+        /> */}
       </View>
       <View style={styles.keyboard}>
         <VirtualKeyboard
