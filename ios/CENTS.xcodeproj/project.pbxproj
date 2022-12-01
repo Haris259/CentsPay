@@ -14,10 +14,11 @@
 		23B2DAA8F90947D6AE522640 /* Poppins-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4481BE58658A40E78A9661B3 /* Poppins-Italic.ttf */; };
 		254F6D577E774C0ABB3B5703 /* Poppins-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 77566CC3765740F2B63080D8 /* Poppins-ThinItalic.ttf */; };
 		28485E480A034987978799EF /* Poppins-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 922C46B38CC64CB98B31392F /* Poppins-SemiBoldItalic.ttf */; };
+		43882689D610FEFCDA619B3D /* libPods-CENTS-CENTSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 672A63B1420A9606E776470D /* libPods-CENTS-CENTSTests.a */; };
 		504DDB4C5F4747E8AEE73475 /* Poppins-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 68112DCA827540E099B9E991 /* Poppins-LightItalic.ttf */; };
 		579802A256FD440D822A7454 /* Poppins-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 468AF2B642354AB492B7B58F /* Poppins-ExtraBoldItalic.ttf */; };
+		5D5C84FE440FCD93F2DA1BA0 /* libPods-CENTS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BE352D3858749E6495B55FC /* libPods-CENTS.a */; };
 		6253677ECB8040F7897A8B27 /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E26F221295424323B59A31F7 /* Poppins-Bold.ttf */; };
-		742ADEA13AACE05F9D208DB6 /* libPods-CENTS-CENTSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AC63C1482528F8184FCC02F2 /* libPods-CENTS-CENTSTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		8D079BCC188646D6A58733F3 /* Poppins-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 689D23C8CD3D423DAB4EC0DA /* Poppins-MediumItalic.ttf */; };
 		987ADD1A7CC5449BB701B3E3 /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 37B9DDD451BC43B6999139DE /* Poppins-Regular.ttf */; };
@@ -31,7 +32,6 @@
 		DBD80FD8F2774C2A9997BB74 /* Poppins-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FA8D36B4577A4110AD1E7377 /* Poppins-ExtraBold.ttf */; };
 		EDA007352A2A44BEAC04D086 /* Poppins-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D82FD766917E47CA97DBA852 /* Poppins-Thin.ttf */; };
 		F47DDD0454CD430490A4A92A /* Poppins-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3E6D757945254C08B506B91A /* Poppins-SemiBold.ttf */; };
-		FAE60FD3633084971906AD10 /* libPods-CENTS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EFACA25874213FAC40F8A5B /* libPods-CENTS.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,29 +55,29 @@
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = CENTS/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = CENTS/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = CENTS/main.m; sourceTree = "<group>"; };
+		240500694AADF697FB2B180B /* Pods-CENTS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CENTS.release.xcconfig"; path = "Target Support Files/Pods-CENTS/Pods-CENTS.release.xcconfig"; sourceTree = "<group>"; };
 		29083CD003BB4794B4664594 /* Poppins-Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Poppins-Medium.ttf"; path = "../src/assets/font/Poppins-Medium.ttf"; sourceTree = "<group>"; };
 		37B9DDD451BC43B6999139DE /* Poppins-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Poppins-Regular.ttf"; path = "../src/assets/font/Poppins-Regular.ttf"; sourceTree = "<group>"; };
 		3E6D757945254C08B506B91A /* Poppins-SemiBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Poppins-SemiBold.ttf"; path = "../src/assets/font/Poppins-SemiBold.ttf"; sourceTree = "<group>"; };
 		4481BE58658A40E78A9661B3 /* Poppins-Italic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Poppins-Italic.ttf"; path = "../src/assets/font/Poppins-Italic.ttf"; sourceTree = "<group>"; };
 		468AF2B642354AB492B7B58F /* Poppins-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Poppins-ExtraBoldItalic.ttf"; path = "../src/assets/font/Poppins-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
-		47581BE2701271CEA1949281 /* Pods-CENTS-CENTSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CENTS-CENTSTests.debug.xcconfig"; path = "Target Support Files/Pods-CENTS-CENTSTests/Pods-CENTS-CENTSTests.debug.xcconfig"; sourceTree = "<group>"; };
+		6239ACBB04F0E761CF2DB420 /* Pods-CENTS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CENTS.debug.xcconfig"; path = "Target Support Files/Pods-CENTS/Pods-CENTS.debug.xcconfig"; sourceTree = "<group>"; };
+		672A63B1420A9606E776470D /* libPods-CENTS-CENTSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CENTS-CENTSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		68112DCA827540E099B9E991 /* Poppins-LightItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Poppins-LightItalic.ttf"; path = "../src/assets/font/Poppins-LightItalic.ttf"; sourceTree = "<group>"; };
 		689D23C8CD3D423DAB4EC0DA /* Poppins-MediumItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Poppins-MediumItalic.ttf"; path = "../src/assets/font/Poppins-MediumItalic.ttf"; sourceTree = "<group>"; };
-		6C77BF7C095CA00654E921C7 /* Pods-CENTS-CENTSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CENTS-CENTSTests.release.xcconfig"; path = "Target Support Files/Pods-CENTS-CENTSTests/Pods-CENTS-CENTSTests.release.xcconfig"; sourceTree = "<group>"; };
-		6EFACA25874213FAC40F8A5B /* libPods-CENTS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CENTS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		77566CC3765740F2B63080D8 /* Poppins-ThinItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Poppins-ThinItalic.ttf"; path = "../src/assets/font/Poppins-ThinItalic.ttf"; sourceTree = "<group>"; };
 		7DAD37D1FCBF4FC8ABFA0F8A /* Poppins-ExtraLightItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Poppins-ExtraLightItalic.ttf"; path = "../src/assets/font/Poppins-ExtraLightItalic.ttf"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = CENTS/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		830D1C0E33FD47A1ABCA6F46 /* Poppins-Light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Poppins-Light.ttf"; path = "../src/assets/font/Poppins-Light.ttf"; sourceTree = "<group>"; };
+		8BE352D3858749E6495B55FC /* libPods-CENTS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CENTS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		922C46B38CC64CB98B31392F /* Poppins-SemiBoldItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Poppins-SemiBoldItalic.ttf"; path = "../src/assets/font/Poppins-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
-		AC63C1482528F8184FCC02F2 /* libPods-CENTS-CENTSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CENTS-CENTSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		AF249881570B7240C798B534 /* Pods-CENTS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CENTS.debug.xcconfig"; path = "Target Support Files/Pods-CENTS/Pods-CENTS.debug.xcconfig"; sourceTree = "<group>"; };
+		A892E55A23E30510420F61C4 /* Pods-CENTS-CENTSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CENTS-CENTSTests.release.xcconfig"; path = "Target Support Files/Pods-CENTS-CENTSTests/Pods-CENTS-CENTSTests.release.xcconfig"; sourceTree = "<group>"; };
+		BA84D81FCE776E085A765EFE /* Pods-CENTS-CENTSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CENTS-CENTSTests.debug.xcconfig"; path = "Target Support Files/Pods-CENTS-CENTSTests/Pods-CENTS-CENTSTests.debug.xcconfig"; sourceTree = "<group>"; };
 		CA52F7D89FA342578454A2E3 /* Poppins-BlackItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Poppins-BlackItalic.ttf"; path = "../src/assets/font/Poppins-BlackItalic.ttf"; sourceTree = "<group>"; };
 		CE312D95336949DDB8E182DA /* Poppins-ExtraLight.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Poppins-ExtraLight.ttf"; path = "../src/assets/font/Poppins-ExtraLight.ttf"; sourceTree = "<group>"; };
 		D82FD766917E47CA97DBA852 /* Poppins-Thin.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Poppins-Thin.ttf"; path = "../src/assets/font/Poppins-Thin.ttf"; sourceTree = "<group>"; };
 		E26F221295424323B59A31F7 /* Poppins-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Poppins-Bold.ttf"; path = "../src/assets/font/Poppins-Bold.ttf"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
-		F01E81DFE47787D7FED77019 /* Pods-CENTS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CENTS.release.xcconfig"; path = "Target Support Files/Pods-CENTS/Pods-CENTS.release.xcconfig"; sourceTree = "<group>"; };
 		F824A43E8394481CB7F32569 /* Poppins-Black.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Poppins-Black.ttf"; path = "../src/assets/font/Poppins-Black.ttf"; sourceTree = "<group>"; };
 		FA8D36B4577A4110AD1E7377 /* Poppins-ExtraBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Poppins-ExtraBold.ttf"; path = "../src/assets/font/Poppins-ExtraBold.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -87,7 +87,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				742ADEA13AACE05F9D208DB6 /* libPods-CENTS-CENTSTests.a in Frameworks */,
+				43882689D610FEFCDA619B3D /* libPods-CENTS-CENTSTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,7 +95,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FAE60FD3633084971906AD10 /* libPods-CENTS.a in Frameworks */,
+				5D5C84FE440FCD93F2DA1BA0 /* libPods-CENTS.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -161,8 +161,8 @@
 			isa = PBXGroup;
 			children = (
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
-				6EFACA25874213FAC40F8A5B /* libPods-CENTS.a */,
-				AC63C1482528F8184FCC02F2 /* libPods-CENTS-CENTSTests.a */,
+				8BE352D3858749E6495B55FC /* libPods-CENTS.a */,
+				672A63B1420A9606E776470D /* libPods-CENTS-CENTSTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -170,10 +170,10 @@
 		359D79E49D09A41315DD49BB /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				AF249881570B7240C798B534 /* Pods-CENTS.debug.xcconfig */,
-				F01E81DFE47787D7FED77019 /* Pods-CENTS.release.xcconfig */,
-				47581BE2701271CEA1949281 /* Pods-CENTS-CENTSTests.debug.xcconfig */,
-				6C77BF7C095CA00654E921C7 /* Pods-CENTS-CENTSTests.release.xcconfig */,
+				6239ACBB04F0E761CF2DB420 /* Pods-CENTS.debug.xcconfig */,
+				240500694AADF697FB2B180B /* Pods-CENTS.release.xcconfig */,
+				BA84D81FCE776E085A765EFE /* Pods-CENTS-CENTSTests.debug.xcconfig */,
+				A892E55A23E30510420F61C4 /* Pods-CENTS-CENTSTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -217,12 +217,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "CENTSTests" */;
 			buildPhases = (
-				21675765FDDB4A5B077F2E33 /* [CP] Check Pods Manifest.lock */,
+				88F10F2DCD08E4A86FC1218C /* [CP] Check Pods Manifest.lock */,
 				00E356EA1AD99517003FC87E /* Sources */,
 				00E356EB1AD99517003FC87E /* Frameworks */,
 				00E356EC1AD99517003FC87E /* Resources */,
-				9C8E9030314491B372F44DB6 /* [CP] Embed Pods Frameworks */,
-				926BE5C0309D4CC3C75B8BF3 /* [CP] Copy Pods Resources */,
+				17DB868A36F15BB4E0495BE7 /* [CP] Embed Pods Frameworks */,
+				C69F4A011A2020E081886E37 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -241,14 +241,14 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "CENTS" */;
 			buildPhases = (
-				F9C72530967B367360EC9C50 /* [CP] Check Pods Manifest.lock */,
+				6FA194BEF104CF696BB6E891 /* [CP] Check Pods Manifest.lock */,
 				FD10A7F022414F080027D42C /* Start Packager */,
 				13B07F871A680F5B00A75B9A /* Sources */,
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
-				22E9F08A68F47156301C1D36 /* [CP] Embed Pods Frameworks */,
-				098BDBE692E24C02E422A203 /* [CP] Copy Pods Resources */,
+				F751981DC65E7CF297956E89 /* [CP] Embed Pods Frameworks */,
+				A41E381ED46CB31DDF8A4B72 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -353,24 +353,46 @@
 			shellPath = /bin/sh;
 			shellScript = "set -e\n\nexport NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh\n";
 		};
-		098BDBE692E24C02E422A203 /* [CP] Copy Pods Resources */ = {
+		17DB868A36F15BB4E0495BE7 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-CENTS/Pods-CENTS-resources-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-CENTS-CENTSTests/Pods-CENTS-CENTSTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
-			name = "[CP] Copy Pods Resources";
+			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-CENTS/Pods-CENTS-resources-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-CENTS-CENTSTests/Pods-CENTS-CENTSTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CENTS/Pods-CENTS-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CENTS-CENTSTests/Pods-CENTS-CENTSTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		21675765FDDB4A5B077F2E33 /* [CP] Check Pods Manifest.lock */ = {
+		6FA194BEF104CF696BB6E891 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CENTS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		88F10F2DCD08E4A86FC1218C /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -392,24 +414,24 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		22E9F08A68F47156301C1D36 /* [CP] Embed Pods Frameworks */ = {
+		A41E381ED46CB31DDF8A4B72 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-CENTS/Pods-CENTS-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-CENTS/Pods-CENTS-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
-			name = "[CP] Embed Pods Frameworks";
+			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-CENTS/Pods-CENTS-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-CENTS/Pods-CENTS-resources-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CENTS/Pods-CENTS-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CENTS/Pods-CENTS-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		926BE5C0309D4CC3C75B8BF3 /* [CP] Copy Pods Resources */ = {
+		C69F4A011A2020E081886E37 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -426,43 +448,21 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CENTS-CENTSTests/Pods-CENTS-CENTSTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		9C8E9030314491B372F44DB6 /* [CP] Embed Pods Frameworks */ = {
+		F751981DC65E7CF297956E89 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-CENTS-CENTSTests/Pods-CENTS-CENTSTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-CENTS/Pods-CENTS-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-CENTS-CENTSTests/Pods-CENTS-CENTSTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-CENTS/Pods-CENTS-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CENTS-CENTSTests/Pods-CENTS-CENTSTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		F9C72530967B367360EC9C50 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-CENTS-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CENTS/Pods-CENTS-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		FD10A7F022414F080027D42C /* Start Packager */ = {
@@ -517,7 +517,7 @@
 /* Begin XCBuildConfiguration section */
 		00E356F61AD99517003FC87E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 47581BE2701271CEA1949281 /* Pods-CENTS-CENTSTests.debug.xcconfig */;
+			baseConfigurationReference = BA84D81FCE776E085A765EFE /* Pods-CENTS-CENTSTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -545,7 +545,7 @@
 		};
 		00E356F71AD99517003FC87E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6C77BF7C095CA00654E921C7 /* Pods-CENTS-CENTSTests.release.xcconfig */;
+			baseConfigurationReference = A892E55A23E30510420F61C4 /* Pods-CENTS-CENTSTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -570,7 +570,7 @@
 		};
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AF249881570B7240C798B534 /* Pods-CENTS.debug.xcconfig */;
+			baseConfigurationReference = 6239ACBB04F0E761CF2DB420 /* Pods-CENTS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -597,7 +597,7 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F01E81DFE47787D7FED77019 /* Pods-CENTS.release.xcconfig */;
+			baseConfigurationReference = 240500694AADF697FB2B180B /* Pods-CENTS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;

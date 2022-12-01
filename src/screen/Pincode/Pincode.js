@@ -32,7 +32,7 @@ const Pincode = () => {
         <Text style={globalStyles.miniHeading}>Welcome back!</Text>
         <Text style={globalStyles.grayHeading2}>Enter Passcode to unlock</Text>
         <View style={{marginTop: 30}}>
-          {/* <SmoothPinCodeInput
+          <SmoothPinCodeInput
             placeholder={
               <View
                 style={{
@@ -61,7 +61,7 @@ const Pincode = () => {
             value={code}
             onTextChange={setCode}
             editable={false}
-          /> */}
+          />
         </View>
       </View>
       <View style={styles.keyboard}>

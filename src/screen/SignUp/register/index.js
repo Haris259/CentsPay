@@ -58,7 +58,7 @@ const Register = ({navigation}) => {
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.heading}>
-        <Text style={globalStyles.miniHeading}>Tell us a bit about ggg</Text>
+        <Text style={globalStyles.miniHeading}>Tell us a bit about</Text>
         <Text style={globalStyles.miniHeading}>yourself</Text>
       </View>
       {/* <KeyboardAwareScrollView> */}

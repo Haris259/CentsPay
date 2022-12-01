@@ -6,7 +6,7 @@ import {
   TouchableOpacity,
   Modal,
   TextInput,
-  SafeAreaView
+  SafeAreaView,
 } from 'react-native';
 import React, {useState} from 'react';
 import {globalStyles} from '../../../common/styles';
@@ -73,20 +73,22 @@ const SendMoneyBymb = ({navigation, route}) => {
           )}
 
           <Text style={(globalStyles.text, {marginTop: 25})}>Phone Number</Text>
-          {/* <TextInputMask
-            type={'cel-phone'}
+          <TextInput
+            // type={'cel-phone'}
             style={styles.inputMask}
-            options={{
-              maskType: 'BRL',
-              dddMask: '9999 999 999 ',
-            }}
+            // options={{
+            //   maskType: 'BRL',
+            //   dddMask: '9999 999 999 ',
+
+            placeholder="9999 999 999 "
+            keyboardType="decimal-pad"
             editable={false}
             maxLength={13}
             value={text}
             onChangeText={text => {
               setText(text);
             }}
-          /> */}
+          />
         </View>
         <View style={styles.keyboard}>
           <VirtualKeyboard
@@ -110,7 +112,9 @@ const SendMoneyBymb = ({navigation, route}) => {
         visible={visble}
         avoidKeyboard={true}>
         <View style={styles.modal1}>
-        <TouchableOpacity style={styles.iconClose} onPress={()=> setVisible(false)}>
+          <TouchableOpacity
+            style={styles.iconClose}
+            onPress={() => setVisible(false)}>
             <Image source={icon.cross} />
           </TouchableOpacity>
           <View style={{marginTop: 30, marginHorizontal: 15}}>
@@ -121,14 +125,15 @@ const SendMoneyBymb = ({navigation, route}) => {
                 color: '#000000',
                 fontFamily: Fonts.medium,
               }}>
-           
               This number doesn't have {'\n'} a registered centspay account
             </Text>
           </View>
           <View style={{alignItems: 'center', marginTop: 70}}>
             <SecondaryButton
               title={'Invite'}
-              onPress={() => {navigation.navigate('inviteSent'), setVisible(false)}}
+              onPress={() => {
+                navigation.navigate('inviteSent'), setVisible(false);
+              }}
             />
             <TouchableOpacity style={{marginTop: 60}}>
               <Text
@@ -144,7 +149,7 @@ const SendMoneyBymb = ({navigation, route}) => {
           </View>
         </View>
       </Modal>
-      <ModalCode  modalVisible={modalVisible} handleClick={handleClick} />
+      <ModalCode modalVisible={modalVisible} handleClick={handleClick} />
     </>
   );
 };
@@ -205,8 +210,8 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.25,
     shadowRadius: 4,
   },
-  iconClose:{
-    flexDirection:'row-reverse',
-    padding:5
-  }
+  iconClose: {
+    flexDirection: 'row-reverse',
+    padding: 5,
+  },
 });

@@ -1,4 +1,10 @@
-import {StyleSheet, Text, View, TouchableOpacity} from 'react-native';
+import {
+  StyleSheet,
+  Text,
+  View,
+  TouchableOpacity,
+  TextInput,
+} from 'react-native';
 import React, {useState} from 'react';
 import {globalStyles} from '../../../common/styles';
 import MainHeading from '../../../components/heading/mainHeading';
@@ -21,9 +27,18 @@ const ForgotPassword = () => {
         <Text style={globalStyles.miniHeading}>Forgot Passcode</Text>
       </View>
       <View style={{margin: 30}}>
-        <Text style={[globalStyles.text,{paddingVertical:10,paddingHorizontal:4}]}>Enter your Phone Number</Text>
-        {/* <TextInputMask
-          type={'cel-phone'}
+        <Text
+          style={[
+            globalStyles.text,
+            {paddingVertical: 10, paddingHorizontal: 4},
+          ]}>
+          Enter your Phone Number
+        </Text>
+        <TextInput
+          // type={'cel-phone'}
+
+          placeholder="9999 999 999 "
+          keyboardType="decimal-pad"
           style={{
             fontFamily: Fonts.medium,
             width: 315,
@@ -37,11 +52,11 @@ const ForgotPassword = () => {
             borderRadius: 6,
             paddingHorizontal: 15,
           }}
-          options={{
-            maskType: 'BRL',
-            dddMask: '9999 999 999 ',
-          }}
-          editable={false}
+          // options={{
+          //   maskType: 'BRL',
+          //   dddMask: '9999 999 999 ',
+          // }}
+          // editable={false}
           maxLength={13}
           value={text}
           onChangeText={text => {
@@ -49,7 +64,7 @@ const ForgotPassword = () => {
           }}
           // add the ref to a local var
           ref={ref => (this.phoneField = ref)}
-        /> */}
+        />
       </View>
       <View style={styles.keyboard}>
         <VirtualKeyboard
@@ -66,23 +81,26 @@ const ForgotPassword = () => {
           />
         </View> */}
 
-    <LinearGradient
-      style={{borderRadius: 50, elevation: 6,height:50,width:200,justifyContent:'center',alignItems:'center',alignSelf:'center'}}
-      // colors={['#5ED2A0', '#339CB1']}
-      colors={[
-        '#d84d5b',
-        '#dc5d4f',
-      ]}
-      start={{x: 0, y: 0}} end={{x: 1, y: 0}}
-      
-      >
-      <TouchableOpacity onPress={() => navigation.navigate('otp')} >
-        <Text style={{color:'#fff',fontFamily:Fonts.medium}}>Continue</Text>
-      </TouchableOpacity>
-    </LinearGradient>
-
-
-
+        <LinearGradient
+          style={{
+            borderRadius: 50,
+            elevation: 6,
+            height: 50,
+            width: 200,
+            justifyContent: 'center',
+            alignItems: 'center',
+            alignSelf: 'center',
+          }}
+          // colors={['#5ED2A0', '#339CB1']}
+          colors={['#d84d5b', '#dc5d4f']}
+          start={{x: 0, y: 0}}
+          end={{x: 1, y: 0}}>
+          <TouchableOpacity onPress={() => navigation.navigate('otp')}>
+            <Text style={{color: '#fff', fontFamily: Fonts.medium}}>
+              Continue
+            </Text>
+          </TouchableOpacity>
+        </LinearGradient>
 
         {/* ///// */}
       </View>

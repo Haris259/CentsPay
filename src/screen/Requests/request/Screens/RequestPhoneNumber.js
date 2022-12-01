@@ -1,4 +1,11 @@
-import {StyleSheet, Text, View, TouchableOpacity, Image} from 'react-native';
+import {
+  StyleSheet,
+  Text,
+  View,
+  TouchableOpacity,
+  Image,
+  TextInput,
+} from 'react-native';
 import React, {useState} from 'react';
 import {globalStyles} from '../../../../common/styles';
 import ModalCode from '../items/modalCode';
@@ -7,7 +14,7 @@ import icon from '../../../../assets/icon';
 // import TextInputMask from 'react-native-text-input-mask';
 import VirtualKeyboard from 'react-native-virtual-keyboard';
 import SecondaryButton from '../../../../components/button/secondaryButton';
-import { SafeAreaView } from 'react-native-safe-area-context';
+import {SafeAreaView} from 'react-native-safe-area-context';
 const RequestPhoneNumber = ({navigation, route}) => {
   const [modalVisible, setModalVisible] = useState(false);
   const [chooseCountry, setChooseCountry] = useState(true);
@@ -63,20 +70,22 @@ const RequestPhoneNumber = ({navigation, route}) => {
           )}
 
           <Text style={(globalStyles.text, {marginTop: 25})}>Phone Number</Text>
-          {/* <TextInputMask
-            type={'cel-phone'}
+          <TextInput
+            // type={'cel-phone'}
             style={styles.inputMask}
-            options={{
-              maskType: 'BRL',
-              dddMask: '9999 999 999 ',
-            }}
-            editable={false}
+            // options={{
+            //   maskType: 'BRL',
+            //   dddMask: '9999 999 999 ',
+            // }}
+            // editable={false}
             maxLength={13}
+            placeholder="9999 999 999 "
+            keyboardType="decimal-pad"
             value={text}
             onChangeText={text => {
               setText(text);
             }}
-          /> */}
+          />
         </View>
         <View style={styles.keyboard}>
           <VirtualKeyboard

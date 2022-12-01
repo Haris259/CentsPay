@@ -1,5 +1,11 @@
-import {StyleSheet, Text, Image, View, TouchableOpacity,StatusBar} from 'react-native';
-import {TextInput} from 'react-native-paper';
+import {
+  StyleSheet,
+  Text,
+  Image,
+  View,
+  TouchableOpacity,
+  TextInput,
+} from 'react-native';
 import React, {useEffect, useState} from 'react';
 import {globalStyles} from '../../../common/styles';
 import MainHeading from '../../../components/heading/mainHeading';
@@ -10,7 +16,7 @@ import icon from '../../../assets/icon';
 
 import ModalCode from './items/modalCode';
 import {Fonts} from '../../../assets/font/fonts';
-import { SafeAreaView } from 'react-native-safe-area-context';
+import {SafeAreaView} from 'react-native-safe-area-context';
 const PhoneNumber = ({navigation, route}) => {
   const [modalVisible, setModalVisible] = useState(false);
   const [chooseCountry, setChooseCountry] = useState(true);
@@ -33,13 +39,10 @@ const PhoneNumber = ({navigation, route}) => {
   const handleClick = () => {
     // alert(modalVisible)
     setModalVisible(false);
-
-
   };
 
   return (
     <SafeAreaView>
-
       <View style={styles.container}>
         <View style={styles.heading}>
           <Text style={globalStyles.miniHeading}>Get started with</Text>
@@ -79,21 +82,24 @@ const PhoneNumber = ({navigation, route}) => {
             </TouchableOpacity>
           )}
           <Text style={[globalStyles.text, {marginTop: 25}]}>Phone Number</Text>
-          {/* <TextInputMask
-            type={'cel-phone'}
+          <TextInput
+            // type={'cel-phone'}
             style={styles.textInputMask}
-            options={{
-              maskType: 'BRL',
-              dddMask: '9999 999 999 ',
-            }}
-            editable={false}
+            // options={{
+            //   maskType: 'BRL',
+            //   dddMask: '9999 999 999 ',
+            // }}
+            // editable={false}
+            // maxLength={13}
             maxLength={13}
+            placeholder="9999 999 999 "
+            keyboardType="decimal-pad"
             value={text}
             onChangeText={text => {
               setText(text);
             }}
             ref={ref => (this.phoneField = ref)}
-          /> */}
+          />
         </View>
         <View style={styles.keyboard}>
           <VirtualKeyboard
