@@ -10,7 +10,7 @@ import {
 import Permissions from 'react-native-permissions';
 import PDFScanner from '@woonivers/react-native-document-scanner';
 import {useNavigation} from '@react-navigation/native';
-const DockPicker = () => {
+const DockPicker = () => { 
   const pdfScannerElement = useRef(null);
   const [data, setData] = useState({});
   const [allowed, setAllowed] = useState(false);
